@@ -1,0 +1,277 @@
+.contactForm {
+  width: calc(100% - (2 * $space));
+  margin: 0 $space;
+  // position: absolute;
+  // left: $space;
+  color: $white;
+
+  // @media screen and (min-width: $bpoint-desk) {
+  //   width: 90%;
+  // }
+  h2 {
+    color: $color-1;
+  }
+
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../img/kevin-noble-gA3Qd2tquMc-unsplash.jpg");
+    background-size: cover;
+    background-position: 60%;
+    z-index: -1;
+
+    @media screen and (min-width: $bpoint-tab) {
+      background-position: center;
+      transform: scaleX(-1);
+    }
+
+    @media screen and (min-width: $bpoint-desk) {
+      background-position: 30%;
+      transform: scaleX(-1);
+    }
+  }
+
+  &__content {
+    margin: $space 0;
+    padding: $space;
+
+    @media screen and (min-width: $bpoint-desk) {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+    }
+
+    &-info {
+      min-width: 60%;
+      background-color: rgba($white, 0.8);
+      text-align: center;
+      padding: 0.5 * $space 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 2px;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 150px;
+        height: 5px;
+        background-color: $green;
+      }
+
+      @media screen and (min-width: $bpoint-tab) {
+        // flex-direction: row;
+        // justify-content: space-evenly;
+        // align-items: center;
+        // width: 50%;
+      }
+
+      @media screen and (min-width: $bpoint-desk) {
+        flex-direction: column;
+        font-size: 1.25 * $font-size-base;
+        padding: $space 0;
+      }
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: $fw-bold;
+        letter-spacing: 3px;
+        margin-bottom: $space;
+        color: $color-1;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 0.5px;
+          width: 90%;
+          margin: auto;
+          background-color: $color-5;
+        }
+      }
+
+      ul {
+        color: $color-5;
+        padding: $space;
+      }
+
+      @media screen and (min-width: $bpoint-desk) {
+        width: 100%;
+      }
+    }
+
+    //CONTACT FORM
+
+    &-form {
+      fieldset {
+        width: 80%;
+        color: $white;
+        background-color: rgba($white, 0.8);
+        margin: $space 0;
+        padding: $space;
+        border-radius: 2px;
+        color: $color-1;
+
+        @media screen and (min-width: $bpoint-tab) {
+          width: 50%;
+          margin-left: auto;
+        }
+
+        @media screen and (min-width: $bpoint-desk) {
+          padding: 0.5 * $space $space;
+          margin-left: auto;
+        }
+
+        input,
+        textarea {
+          color: $color-2;
+
+          &::selection {
+            color: $color-4-light;
+          }
+        }
+
+        ::placeholder {
+          color: $color-4-light;
+        }
+
+        //REQUIRED FIELDS
+        .req {
+          position: relative;
+
+          &::after {
+            content: "\1f7bb";
+            position: absolute;
+            right: -0.5 * $space;
+            font-size: $font-size-body2;
+            color: $color-4-light;
+          }
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="email"] {
+          height: 30px;
+          width: 100%;
+          background-color: $beige;
+          border-radius: 3px;
+          border: none;
+          outline: none;
+          margin-bottom: 5px;
+
+          @media screen and (min-width: $bpoint-desk) {
+            height: 40px;
+          }
+
+          &:focus {
+
+            border: 0.5px solid $green;
+          }
+
+          &:invalid:not(:focus) {
+
+            background: rgba(2, 250, 250, .1);
+          }
+        }
+
+        textarea {
+          resize: none;
+          font-size: 0.75 * $font-size-base;
+          width: 100%;
+          border: none;
+          background-color: rgb(240, 235, 235);
+
+          @media screen and (min-width: $bpoint-desk) {
+            width: 100%;
+          }
+
+          &:focus {
+
+            border: 0.5px solid $green;
+          }
+        }
+
+        //CHECKBOX
+        .perm {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          width: 100%;
+          height: 10em;
+
+          a {
+            color: $color-5-light;
+            @extend %link-style;
+          }
+
+          input[type="checkbox"] {
+            display: none;
+
+            &+label {
+              width: 60%;
+              position: relative;
+              padding-left: 2 * $base-unit;
+
+              &::before {
+                content: "\2610";
+                position: absolute;
+                left: 0;
+                font-size: 1.5em;
+                transform: translateY(-0.3em);
+                color: $green;
+              }
+            }
+
+            &:checked {
+
+              &+label {
+
+                color: $green;
+
+                &::before {
+                  content: "\2713";
+                  color: $color-4;
+                }
+              }
+            }
+          }
+
+          //SUBMIT BUTTON
+          input[type="submit"] {
+            align-self: center;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            min-width: 200px;
+            background-color: $color-5;
+            color: $white;
+            padding: 0.25 * $space 0.5 * $space;
+            border-radius: 4px;
+            transition: 200ms ease-in-out;
+
+            &:hover {
+              background-color: $green;
+            }
+          }
+
+          .statement {
+            opacity: 0;
+            transition: 400ms ease;
+
+            &.correct {
+              color: $color-4-light;
+              font-weight: $fw-bold;
+              opacity: 1;
+            }
+
+            &.error {
+              color: $color-error;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

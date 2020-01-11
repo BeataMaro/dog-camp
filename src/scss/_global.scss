@@ -1,0 +1,122 @@
+body {
+  font-size: $font-size-body;
+  line-height: 1.5;
+  font-family: $font-1;
+  color: $color-1;
+  background-color: $white;
+
+
+
+  @media (prefers-color-scheme: dark) {
+
+    background-color: $color-1;
+  }
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+//typography
+h1,
+h2,
+h3 {
+
+  text-align: center;
+}
+
+h1 {
+  font-size: $font-size-h1;
+}
+
+h2 {
+  font-size: $font-size-h2;
+
+}
+
+h3 {
+  font-size: $font-size-h3;
+}
+
+p {
+  letter-spacing: 1px;
+  text-align: center;
+
+  &::selection {
+    color: $color-4-light;
+
+  }
+}
+
+//layout
+.wrapper {
+  max-width: $container-max-width;
+  margin: 0 auto;
+  position: relative;
+  // padding-left: $space;
+  // padding-right: $space;
+  padding: 0 $space;
+}
+
+.component {
+  margin: 2 * $space 0;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="email"],
+textarea {
+
+  outline: none;
+}
+
+//atoms
+.btn {
+  transition: all 350ms ease-in-out;
+  border: 4px solid $color-5;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 0.5 * $space $space;
+
+  &:hover {
+    color: $white;
+    background-color: $black;
+    border-color: $black;
+  }
+}
+
+img {
+
+  max-width: 100%;
+}
+
+%link-style {
+
+  text-decoration: none;
+  color: $color-1;
+
+}
+
+%shadow-box {
+
+  // box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
+  box-shadow: 0 17px 21px 0 #8a8a8a;
+}
+
+//DARK MODE 
+
+// @media (prefers-color-scheme: dark) {
+
+//   body {
+//     background-color: $color-1;
+//   }
+
+//   p {
+
+//     color: $white;
+//   }
+
+// }

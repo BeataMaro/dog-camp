@@ -1,0 +1,17 @@
+.footer {
+  color: $white;
+  background-color: $color-1;
+  padding: 0.5 * $space;
+
+  &__content {
+    font-size: $font-size-body2;
+    text-shadow: 1px 1px $black;
+
+    &-privacy {
+
+      @extend %link-style;
+      color: $color-4;
+
+    }
+  }
+}

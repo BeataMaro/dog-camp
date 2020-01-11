@@ -1,0 +1,14 @@
+.about {
+
+
+
+  &__content {
+    padding-top: .5 * $space;
+
+
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $white;
+  }
+}

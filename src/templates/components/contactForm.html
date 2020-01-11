@@ -1,0 +1,62 @@
+<section class="component contactForm" id="contactForm">
+    <h2>Contact Form</h2>
+    <div class="wrapper">
+        <div class="contactForm__background"></div>
+
+        <div class="contactForm__content">
+            <div class="contactForm__content-info">
+                <h3>Dog Camp</h3>
+                <!-- <img src="../img/osprey-black-mobile.png" alt="logo" /> -->
+                <ul>
+                    <li>Lyncoln Street 345</li>
+                    <li>32-566 USA</li>
+                    <li>dogcamp@info.com</li>
+                    <li>phone: 677-33-22</li>
+                </ul>
+
+            </div>
+
+            <form action="" method="GET" class="contactForm__content-form" name="contactForm" novalidate>
+                <fieldset>
+                    <p>
+                        <label for="userName" class="req">Name:</label><input type="text" name="userName" id="userName"
+                            title="Please fill out this field" required autocomplete="off" />
+                    </p>
+                    <p>
+
+                        <label for="userMail" class="req">E-mail:</label>
+                        <input type="email" name="userMail" id="userMail" class="input"
+                            title="Please fill out this field" required autocomplete="off" />
+
+                    </p>
+                    <p>
+                        <label for="userPhone">Phone number:</label>
+                        <input type="number" name="userPhone" id="userPhone" class="input" autocomplete="off" />
+
+                    </p>
+                    <p>
+                        <label for="txtarea" class="msg">Message:</label>
+                        <textarea rows="5" placeholder="Hello," id="txtarea" class="input"
+                            autocomplete="off"></textarea>
+                    </p>
+                    <div class="perm">
+                        <input type="checkbox" name="checkbox" class="permission" id="check"
+                            title="Please select agreement" required /><label for="check" class="req check">I agree to
+                            the <span>
+                                <a href="#" class="terms">terms of
+                                    service</a>
+                            </span></label>
+                        <input type="submit" value="Send message" id="submitBtn">
+                        <p class="statement">Komunikat</p>
+                    </div>
+                </fieldset>
+
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+</section>
