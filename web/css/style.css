@@ -60,6 +60,12 @@ html {
   font-size: 16px;
   scroll-behavior: smooth; }
 
+#scrollTarget1,
+#scrollTarget2,
+#scrollTarget3 {
+  height: 5em;
+  background-color: transparent; }
+
 h1,
 h2,
 h3 {
@@ -283,7 +289,6 @@ img {
     .hero {
       background-image: url("../img/hero/jeff-nissen-Aok-unsplash 1920x600 hero.jpg");
       background-size: cover;
-      height: 90vh;
       background-position: 15% top; } }
   @media screen and (min-width: 1200px) {
     .hero {
@@ -303,7 +308,7 @@ img {
               transform: translate(-50%, -50%);
       color: #fff;
       text-align: right;
-      font-size: 12vmin;
+      font-size: 10vmin;
       font-weight: 700;
       line-height: 10vmin;
       text-shadow: 0 4px #111;
@@ -334,7 +339,7 @@ img {
               transform: rotateZ(360deg); }
 
 .about__content {
-  padding-top: 1rem; }
+  padding-top: 2rem; }
 
 @media (prefers-color-scheme: dark) {
   .about {

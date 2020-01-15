@@ -18,6 +18,15 @@ html {
   scroll-behavior: smooth;
 }
 
+#scrollTarget1,
+#scrollTarget2,
+#scrollTarget3 {
+  height: 5em;
+  background-color: transparent;
+  // border: 1px solid red;
+
+}
+
 //typography
 h1,
 h2,

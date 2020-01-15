@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <title></title>
+  <link rel="icon" href="">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -15,10 +16,10 @@
     <a href="/"><img src="img/logo.jpg" alt="logo-pets" class="header__logo" /></a>
     <nav class="header-nav">
       <ul>
-        <li><a href="#about">About us</a></li>
+        <li><a href="#scrollTarget1">About us</a></li>
+        <li><a href="#scrollTarget2">Blog</a></li>
         <li><a href="#">Dog camp</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contactForm">Contact</a></li>
+        <li><a href="#scrollTarget3">Contact</a></li>
       </ul>
       <button class="header__hamburger" data-hamburger-menu>
         <span></span>
@@ -33,16 +34,14 @@
     <div class="hero-content">
       <h1>Happy Dog's <span>Camp</span></h1>
     </div>
-    <img src="img/arrow.svg" class="arrow-icon" alt="scroll-arrow" />
+    <a href="#scrollTarget1"><img src="img/arrow.svg" class="arrow-icon" alt="scroll-arrow" /></a>
 
 
   </div>
 </section>
-  <section class="component about" id="about">
+  <div id="scrollTarget1"></div>
+<section class="component about" id="about">
   <div class="wrapper">
-
-
-
     <h2>About</h2>
     <div class="about__content">
       <p>
@@ -63,7 +62,8 @@
       </p>
     </div>
   </div>
-</section> <section class="component blog" id="blog">
+</section> <div id="scrollTarget2"></div>
+<section class="component blog" id="blog">
   <div class="wrapper">
     <h2>Blog</h2>
     <article class="box">
@@ -124,7 +124,8 @@
     </article>
   </div>
 </section>
-  <section class="component contactForm" id="contactForm">
+  <div id="scrollTarget3"></div>
+<section class="component contactForm" id="contactForm">
     <h2>Contact Form</h2>
     <div class="wrapper">
         <div class="contactForm__background"></div>

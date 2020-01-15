@@ -158,8 +158,6 @@
       height: 2 8 $space;
     }
 
-
-
     & li {
       padding: $space 0.75 * $space;
 
@@ -170,7 +168,6 @@
     }
 
     .header-nav {
-
 
       a {
         padding-top: 0.65 * $space;
@@ -193,7 +190,6 @@
 
       @media screen and (min-width: $bpoint-tab) {
         top: .25 * $space;
-
         width: 55px;
       }
     }
@@ -207,7 +203,6 @@
       }
 
       @media screen and (min-width: $bpoint-desk) {
-
         transform: scale(.8);
         top: 0;
         right: .8 * $space;
