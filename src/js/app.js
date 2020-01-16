@@ -1,9 +1,50 @@
 const hdr = document.getElementById('header');
+const heroTitle = document.querySelector('.hero__title');
+const heroText = heroTitle.textContent;
+const heroLetters = heroText.split('');
+heroTitle.textContent = '';
 const hamburger = document.querySelector('[data-hamburger-menu]');
 const navItems = document.getElementById('navItems');
 const arrowIcon = document.querySelector('.arrow-icon--hero');
 const submitBtn = document.getElementById('submitBtn');
 
+//Hero title animation
+for (let i = 0; i < heroLetters.length; i++) {
+
+  heroTitle.innerHTML += '<span>' + heroLetters[i] + '</span>'
+}
+
+let last = heroText.match(/\s\w+$/i)[0];
+console.log(last);
+
+let item = 0;
+let timer = setInterval(onTick, 65);
+
+function onTick() {
+
+  const span = heroTitle.querySelectorAll('span')[item];
+  console.log(span)
+  span.classList.add('color');
+  item++
+
+  if (item === heroLetters.length - 4) {
+
+    complete();
+    return;
+
+  }
+};
+
+function complete() {
+
+  clearInterval(timer);
+  timer = null;
+
+};
+
+
+
+//Hamburger menu
 
 hamburger.onclick = () => document.body.classList.toggle('open');
 navItems.onclick = () => document.body.classList.remove('open');
