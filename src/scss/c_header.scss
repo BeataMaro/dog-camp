@@ -6,7 +6,7 @@
   height: 2 * $space;
   overflow: hidden;
   z-index: 10;
-  transition: all 500ms; // header scroll animation
+  transition: all 500ms;
 
   @media screen and (min-width: $bpoint-desk) {
 
@@ -21,10 +21,11 @@
     body.open & {
       height: 100vh;
       background-color: $color-5;
+      width: 50%;
 
       li {
         display: block;
-        padding: 2 * $space;
+        padding: $space;
 
         a {
           color: $white;
@@ -116,9 +117,7 @@
   }
 
   @media screen and (min-width: $bpoint-desk-xl) {
-
     a {
-
       font-size: 1.5 * $base-unit;
     }
   }
@@ -133,15 +132,16 @@
     border-radius: 50%;
     transition: 250ms ease-in;
 
+    body.open & {
 
-    @media screen and (min-width: $bpoint-desk) {
-
-
-      width: 60px;
-      top: .4 * $space;
-
+      display: none;
     }
 
+
+    @media screen and (min-width: $bpoint-desk) {
+      width: 60px;
+      top: .4 * $space;
+    }
   }
 
   &.down {
@@ -155,7 +155,7 @@
     }
 
     @media screen and (min-width: $bpoint-desk) {
-      height: 2 8 $space;
+      height: 2.8 $space;
     }
 
     & li {
@@ -183,15 +183,7 @@
     }
 
     .header__logo {
-
-      width: 50px;
-      top: .3 * $space;
-
-
-      @media screen and (min-width: $bpoint-tab) {
-        top: .25 * $space;
-        width: 55px;
-      }
+      display: none;
     }
 
     .header__hamburger {

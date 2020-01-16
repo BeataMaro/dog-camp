@@ -51,10 +51,14 @@ body {
   line-height: 1.5;
   font-family: "Quicksand", sans-serif;
   color: #333;
-  background-color: #fff; }
+  background-color: #fff;
+  min-height: 100vh; }
   @media (prefers-color-scheme: dark) {
     body {
       background-color: #333; } }
+  body.open {
+    overflow-y: hidden;
+    height: 100vh; }
 
 html {
   font-size: 16px;
@@ -65,6 +69,19 @@ html {
 #scrollTarget3 {
   height: 5em;
   background-color: transparent; }
+
+.scrollArrow {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 10rem; }
+  .scrollArrow .arrow-icon {
+    width: 20px;
+    -webkit-transition: 200ms ease-in-out;
+    transition: 200ms ease-in-out; }
+    .scrollArrow .arrow-icon:hover {
+      -webkit-transform: rotateZ(360deg);
+              transform: rotateZ(360deg); }
 
 h1,
 h2,
@@ -146,10 +163,11 @@ img {
   @media screen and (max-width: 1200px) {
     body.open .header {
       height: 100vh;
-      background-color: #636e43; }
+      background-color: #636e43;
+      width: 50%; }
       body.open .header li {
         display: block;
-        padding: 4rem; }
+        padding: 2rem; }
         body.open .header li a {
           color: #fff;
           text-decoration: none;
@@ -223,6 +241,8 @@ img {
     border-radius: 50%;
     -webkit-transition: 250ms ease-in;
     transition: 250ms ease-in; }
+    body.open .header__logo {
+      display: none; }
     @media screen and (min-width: 1200px) {
       .header__logo {
         width: 60px;
@@ -236,7 +256,7 @@ img {
         height: 5rem; } }
     @media screen and (min-width: 1200px) {
       .header.down {
-        height: 2 8 2rem; } }
+        height: 2.8 2rem; } }
     .header.down li {
       padding: 2rem 1.5rem; }
       .header.down li a {
@@ -251,12 +271,7 @@ img {
       -webkit-box-shadow: none;
               box-shadow: none; }
     .header.down .header__logo {
-      width: 50px;
-      top: 0.6rem; }
-      @media screen and (min-width: 768px) {
-        .header.down .header__logo {
-          top: 0.5rem;
-          width: 55px; } }
+      display: none; }
     .header.down .header__hamburger {
       margin-top: 0; }
       @media screen and (min-width: 768px) {
@@ -294,8 +309,6 @@ img {
     .hero {
       background-image: url("../img/hero/jeff-nissen-Aok-unsplash 1920x800 hero.jpg");
       background-position: center; } }
-  .hero .wrapper {
-    height: 100%; }
   .hero-content {
     width: 100%;
     height: 100%; }
@@ -312,7 +325,7 @@ img {
       font-weight: 700;
       line-height: 10vmin;
       text-shadow: 0 4px #111;
-      text-transform: uppercase; }
+      text-transform: capitalize; }
       .hero-content h1 span {
         color: brown; }
         .hero-content h1 span::-moz-selection {
@@ -323,20 +336,17 @@ img {
         color: brown; }
       .hero-content h1::selection {
         color: brown; }
-  .hero .arrow-icon {
-    width: 30px;
+  .hero .scrollArrow {
     position: absolute;
-    top: 90%;
-    left: 50%;
-    -webkit-transform: translate(-50% -90%);
-            transform: translate(-50% -90%);
-    -webkit-transition: 200ms ease-in-out;
-    transition: 200ms ease-in-out; }
-    .hero .arrow-icon:hover {
-      -webkit-transform: scale(1.2);
-              transform: scale(1.2);
-      -webkit-transform: rotateZ(360deg);
-              transform: rotateZ(360deg); }
+    top: 60%;
+    left: 0; }
+    .hero .scrollArrow .arrow-icon--hero {
+      width: 30px;
+      -webkit-transition: 200ms ease-in-out;
+      transition: 200ms ease-in-out; }
+      .hero .scrollArrow .arrow-icon--hero:hover {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg); }
 
 .about__content {
   padding-top: 2rem; }
@@ -357,8 +367,7 @@ img {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   -ms-flex-line-pack: justify;
-      align-content: space-between;
-  margin-top: 2rem; }
+      align-content: space-between; }
   .box__article {
     display: -webkit-box;
     display: -ms-flexbox;

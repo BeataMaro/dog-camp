@@ -1,32 +1,34 @@
 const hdr = document.getElementById('header');
 const hamburger = document.querySelector('[data-hamburger-menu]');
-const arrowIcon = document.querySelector('.arrow-icon');
+const navItems = document.getElementById('navItems');
+const arrowIcon = document.querySelector('.arrow-icon--hero');
 const submitBtn = document.getElementById('submitBtn');
 
 
 hamburger.onclick = () => document.body.classList.toggle('open');
+navItems.onclick = () => document.body.classList.remove('open');
 
 
 //header scroll animation
 
 window.onscroll = function (e) {
 
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   if (this.oldScroll < this.scrollY) {
-    console.log('down');
+    // console.log('down');
     hdr.classList.add('down');
 
     arrowIcon.style.display = 'none';
 
   } else {
-    console.log('up');
+    // console.log('up');
     hdr.classList.remove('down');
     arrowIcon.style.display = 'block';
     this.oldScroll = this.scrollY;
 
   }
 }
-//Form
+//Form actions
 window.onload = function () {
   const contactForm = document.querySelector('form'),
     formReq = contactForm.querySelectorAll("[required]"),

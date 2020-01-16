@@ -4,12 +4,16 @@ body {
   font-family: $font-1;
   color: $color-1;
   background-color: $white;
-
-
+  min-height: 100vh;
 
   @media (prefers-color-scheme: dark) {
 
     background-color: $color-1;
+  }
+
+  &.open {
+    overflow-y: hidden;
+    height: 100vh;
   }
 }
 
@@ -23,8 +27,26 @@ html {
 #scrollTarget3 {
   height: 5em;
   background-color: transparent;
-  // border: 1px solid red;
 
+}
+
+.scrollArrow {
+
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 5 * $space;
+
+  .arrow-icon {
+
+    width: 20px;
+    transition: 200ms ease-in-out;
+
+    &:hover {
+      transform: rotateZ(360deg);
+    }
+
+  }
 }
 
 //typography
