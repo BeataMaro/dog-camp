@@ -299,7 +299,8 @@ img {
   background-repeat: no-repeat;
   background-size: 250%;
   background-position: 15%;
-  overflow: hidden; }
+  overflow: hidden;
+  background-attachment: fixed; }
   @media screen and (min-width: 768px) {
     .hero {
       background-image: url("../img/hero/jeff-nissen-Aok-unsplash 1920x600 hero.jpg");
@@ -319,7 +320,6 @@ img {
       width: 80%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
-      color: #fff;
       text-align: right;
       font-size: 10vmin;
       font-weight: 700;
@@ -327,15 +327,17 @@ img {
       text-shadow: 0 4px #111;
       text-transform: capitalize; }
       .hero-content h1 span {
-        color: brown; }
+        color: #fff; }
         .hero-content h1 span::-moz-selection {
-          color: #fff; }
+          color: brown; }
         .hero-content h1 span::selection {
+          color: brown; }
+      .hero-content h1 span.color {
+        color: brown; }
+        .hero-content h1 span.color::-moz-selection {
           color: #fff; }
-      .hero-content h1::-moz-selection {
-        color: brown; }
-      .hero-content h1::selection {
-        color: brown; }
+        .hero-content h1 span.color::selection {
+          color: #fff; }
   .hero .scrollArrow {
     position: absolute;
     top: 60%;

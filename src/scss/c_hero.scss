@@ -8,6 +8,7 @@
   background-size: 250%;
   background-position: 15%;
   overflow: hidden;
+  background-attachment: fixed;
   @extend %shadow-box;
 
   @media screen and (min-width: $bpoint-tab) {
@@ -35,7 +36,6 @@
       left: 50%;
       width: 80%;
       transform: translate(-50%, -50%);
-      color: $white;
       text-align: right;
       font-size: 10vmin;
       font-weight: $fw-bold;
@@ -45,15 +45,21 @@
 
       & span {
 
-        color: brown;
+        color: $white;
 
         &::selection {
-          color: $white;
+          color: brown;
         }
       }
 
-      &::selection {
+      & span.color {
+
         color: brown;
+
+        &::selection {
+
+          color: $white;
+        }
       }
     }
   }

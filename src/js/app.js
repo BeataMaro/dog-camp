@@ -24,6 +24,7 @@ function onTick() {
 
   const span = heroTitle.querySelectorAll('span')[item];
   console.log(span)
+
   span.classList.add('color');
   item++
 
