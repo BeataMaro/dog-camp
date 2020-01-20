@@ -1,11 +1,14 @@
+#scrollTarget2 {
+
+  height: 1em;
+}
+
 .box {
 
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-content: space-between;
-
-
 
   &__article {
     display: flex;
@@ -24,8 +27,6 @@
     @media screen and (min-width: $bpoint-desk) {
 
       flex-basis: 33%;
-
-
     }
 
     &:hover {
@@ -50,7 +51,7 @@
       vertical-align: middle;
 
       @media screen and (min-width: $bpoint-tab) {
-        width: 50%;
+        width: 60%;
 
       }
 

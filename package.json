@@ -1,14 +1,15 @@
 {
-  "name": "fed_html",
+  "name": "Dog camp",
   "version": "1.0.0",
   "description": "",
   "main": "js/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Beata Maro",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0",
     "browser-sync": "^2.18.13",
     "clean-css": "^4.2.1",
     "gulp": "^3.9.1",

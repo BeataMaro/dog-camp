@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-  <title></title>
-  <link rel="icon" href="">
+  <title>Dog camp</title>
+  <link rel="icon" href="../img/black-dog-favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
   <header class="header" id="header" data-js="header">
   <div class="wrapper">
-    <a href="/"><img src="img/logo.jpg" alt="logo-pets" class="header__logo" /></a>
+    <!-- <a href="/"><img src="img/black-dog-favicon.png" alt="logo-pets" class="header__logo" /></a> -->
     <nav class="header-nav">
       <ul id="navItems">
         <li><a href="#scrollTarget1">About us</a></li>
@@ -32,7 +32,11 @@
   <div class="hero-content">
     <h1 class="hero__title">Happy Dog's Camp</h1>
     <div class="scrollArrow">
-      <a href="#scrollTarget1"><img src="img/arrow.svg" class="arrow-icon--hero" alt="scroll-arrow" /></a>
+      <!-- <a href="#scrollTarget1"><img src="img/arrow.svg" class="arrow-icon--hero" alt="scroll-arrow" /></a> -->
+
+      <a href="#scrollTarget1">
+        <i class="fa fa-angle-double-down scrollArrow__icon--hero" id="heroIcon" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 
@@ -62,7 +66,9 @@
   </div>
   </div>
   <div class="scrollArrow">
-    <a href="#scrollTarget2"><img src="img/arrow.svg" class="arrow-icon" alt="scroll-arrow" /></a>
+    <a href="#scrollTarget2">
+      <i class="fa fa-angle-double-down scrollArrow--icon" aria-hidden="true"></i>
+    </a>
   </div>
 </section> <div id="scrollTarget2"></div>
 <section class="component blog" id="blog">
@@ -71,16 +77,16 @@
     <article class="box">
 
       <div class="box__article">
-        <img src="img/caleb-stokes-unsplash240.jpg" srcset="img/caleb-stokes-unsplash240.jpg, img/caleb-stokes-unsplash384.jpg 2x,
-          img/caleb-stokes-unsplash480.jpg 3x" sizes="100vw" alt="dog" class="box__article-img" />
+        <img src="img/blog/caleb-stokes-unsplash240.jpg" srcset="img/blog/caleb-stokes-unsplash240.jpg, img/blog/caleb-stokes-unsplash384.jpg 2x,
+          img/blog/caleb-stokes-unsplash480.jpg 3x" sizes="100vw" alt="dog" class="box__article-img" />
         <h3 class="box__article-title">Friends</h3>
         <p class="box__article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus,
           similique.</p>
         <a href="#" class="box__article-link">Read more...</a>
       </div>
       <div class="box__article">
-        <img src="img/tadeusz-lakota-dog-with-tennis-ball-unsplash240.jpg" srcset="img/tadeusz-lakota-dog-with-tennis-ball-unsplash240.jpg, img/tadeusz-lakota-dog-with-tennis-ball-unsplash384.jpg 2x,
-          img/tadeusz-lakota-dog-with-tennis-ball-unsplash480.jpg 3x" sizes="100vw" alt="dog with tennis ball"
+        <img src="img/blog/tadeusz-lakota-dog-with-tennis-ball-unsplash240.jpg" srcset="img/blog/tadeusz-lakota-dog-with-tennis-ball-unsplash240.jpg, img/blog/tadeusz-lakota-dog-with-tennis-ball-unsplash384.jpg 2x,
+          img/blog/tadeusz-lakota-dog-with-tennis-ball-unsplash480.jpg 3x" sizes="100vw" alt="dog with tennis ball"
           class="box__article-img" />
         <h3 class="box__article-title">Friends</h3>
         <p class="box__article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus,
@@ -88,8 +94,8 @@
         <a href="#" class="box__article-link">Read more...</a>
       </div>
       <div class="box__article">
-        <img src="img/blog/caleb-stokes-unsplash240.jpg" srcset="img/caleb-stokes-unsplash240.jpg, img/caleb-stokes-unsplash384.jpg 2x,
-          img/caleb-stokes-unsplash480.jpg 3x" sizes="100vw" alt="dog"
+        <img src="img/blog/hamish-kale-jumping-dog-unsplash240.jpg" srcset="img/blog/hamish-kale-jumping-dog-unsplash240.jpg, img/blog/hamish-kale-jumping-dog-unsplash384.jpg 2x,
+          img/blog/hamish-kale-jumping-dog-unsplash480.jpg 3x" sizes="100vw" alt="jumping dog"
           class="box__article-img box__article-img--last" />
         <h3 class="box__article-title">Friends</h3>
         <p class="box__article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus,
@@ -98,24 +104,29 @@
       </div>
 
       <div class="box__article">
-        <img src="img/blog/caleb-stokes-unsplash240.jpg" srcset="img/caleb-stokes-unsplash240.jpg, img/caleb-stokes-unsplash384.jpg 2x,
-        img/caleb-stokes-unsplash480.jpg 3x" sizes="100vw" alt="dog" class="box__article-img" />
+        <img src="img/blog/sharon-mccutcheon-black-sad-dog-unsplash240.jpg" srcset="img/blog/sharon-mccutcheon-black-sad-dog-unsplash240.jpg,
+          img/blog/sharon-mccutcheon-black-sad-dog-unsplash384.jpg 2x,
+        img/blog/sharon-mccutcheon-black-sad-dog-unsplash480.jpg 3x" sizes="100vw" alt="dog"
+          class="box__article-img" />
         <h3 class="box__article-title">Friends</h3>
         <p class="box__article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus,
           similique.</p>
         <a href="#" class="box__article-link">Read more...</a>
       </div>
       <div class="box__article box__article--last">
-        <img src="img/blog/caleb-stokes-unsplash240.jpg" srcset="img/caleb-stokes-unsplash240.jpg, img/caleb-stokes-unsplash384.jpg 2x,
-        img/caleb-stokes-unsplash480.jpg 3x" sizes="100vw" alt="dog" class="box__article-img" />
+        <img src="img/blog/bruce-warrington-three-dogs-unsplash240.jpg" srcset="img/blog/bruce-warrington-three-dogs-unsplash240.jpg, img/blog/bruce-warrington-three-dogs-unsplash384.jpg 2x,
+        img/blog/bruce-warrington-three-dogs-unsplash480.jpg 3x" sizes="100vw" alt="three dogs"
+          class="box__article-img" />
         <h3 class="box__article-title">Friends</h3>
         <p class="box__article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus,
           similique.</p>
         <a href="#" class="box__article-link">Read more...</a>
       </div>
       <div class="box__article box__article--last">
-        <img src="img/blog/caleb-stokes-unsplash240.jpg" srcset="/img/caleb-stokes-unsplash240.jpg, /img/caleb-stokes-unsplash384.jpg 2x,
-          /img/caleb-stokes-unsplash480.jpg 3x" sizes="100vw" alt="dog" class="box__article-img" />
+        <img src="img/blog/eddie-howell-dogs-and-woman-on-the-banch-unsplash240.jpg" srcset="/img/blog/eddie-howell-dogs-and-woman-on-the-banch-unsplash240.jpg,
+          /img/blog/eddie-howell-dogs-and-woman-on-the-banch-unsplash384.jpg 2x,
+          /img/blog/eddie-howell-dogs-and-woman-on-the-banch-unsplash480.jpg 3x" sizes="100vw" alt="dog"
+          class="box__article-img" />
         <h3 class="box__article-title">Friends</h3>
         <p class="box__article-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus,
           similique.</p>

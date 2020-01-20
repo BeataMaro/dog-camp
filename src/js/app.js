@@ -1,49 +1,56 @@
+//Hero title animation
+
 const hdr = document.getElementById('header');
+const hamburger = document.querySelector('[data-hamburger-menu]');
+const navItems = document.getElementById('navItems');
+const scrollArrow = document.querySelector('.scrollArrow');
+const arrowIcon = document.getElementById('heroIcon');
+const submitBtn = document.getElementById('submitBtn');
+
 const heroTitle = document.querySelector('.hero__title');
 const heroText = heroTitle.textContent;
 const heroLetters = heroText.split('');
 heroTitle.textContent = '';
-const hamburger = document.querySelector('[data-hamburger-menu]');
-const navItems = document.getElementById('navItems');
-const arrowIcon = document.querySelector('.arrow-icon--hero');
-const submitBtn = document.getElementById('submitBtn');
 
-//Hero title animation
-for (let i = 0; i < heroLetters.length; i++) {
 
-  heroTitle.innerHTML += '<span>' + heroLetters[i] + '</span>'
-}
+let loadAnimation = setTimeout(function () {
 
-let last = heroText.match(/\s\w+$/i)[0];
-console.log(last);
+  for (let i = 0; i < heroLetters.length; i++) {
 
-let item = 0;
-let timer = setInterval(onTick, 65);
-
-function onTick() {
-
-  const span = heroTitle.querySelectorAll('span')[item];
-  console.log(span)
-
-  span.classList.add('color');
-  item++
-
-  if (item === heroLetters.length - 4) {
-
-    complete();
-    return;
-
+    heroTitle.innerHTML += '<span>' + heroLetters[i] + '</span>'
   }
-};
 
-function complete() {
+  let last = heroText.match(/\s\w+$/i)[0];
+  console.log(last);
 
-  clearInterval(timer);
-  timer = null;
+  let item = 0;
+  let timer = setInterval(onTick, 65);
 
-};
+  function onTick() {
+
+    const span = heroTitle.querySelectorAll('span')[item];
+    console.log(span)
+
+    span.classList.add('color');
+    item++
+
+    if (item === heroLetters.length - 4) {
+
+      complete();
+      return;
+
+    }
+  };
+
+  function complete() {
+
+    clearInterval(timer);
+    timer = null;
+
+  };
 
 
+})
 
 //Hamburger menu
 
@@ -53,20 +60,24 @@ navItems.onclick = () => document.body.classList.remove('open');
 
 //header scroll animation
 
-window.onscroll = function (e) {
+window.onscroll = function () {
+  if (scrollArrow.style.pointerEvents === "none") {
+    scrollArrow.style.pointerEvents = "auto"
+  }
 
   // console.log(window.scrollY);
   if (this.oldScroll < this.scrollY) {
     // console.log('down');
     hdr.classList.add('down');
-
-    arrowIcon.style.display = 'none';
+    arrowIcon.style.opacity = '0';
+    scrollArrow.style['pointer-events'] = "none"
 
   } else {
     // console.log('up');
     hdr.classList.remove('down');
-    arrowIcon.style.display = 'block';
+    arrowIcon.style.opacity = '1';
     this.oldScroll = this.scrollY;
+    scrollArrow.style['pointer-events'] = "auto"
 
   }
 }

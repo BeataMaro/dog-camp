@@ -37,17 +37,14 @@ html {
   place-items: center;
   margin-top: 5 * $space;
 
-  .arrow-icon {
+  &--icon {
 
-    width: 20px;
-    transition: 200ms ease-in-out;
-
-    &:hover {
-      transform: rotateZ(360deg);
-    }
-
+    color: $black;
+    font-size: 1.6rem;
   }
+
 }
+
 
 //typography
 h1,

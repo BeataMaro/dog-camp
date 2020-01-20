@@ -64,7 +64,6 @@
     }
   }
 
-
   .scrollArrow {
 
     position: absolute;
@@ -72,18 +71,14 @@
     left: 0;
 
 
-    .arrow-icon--hero {
+    &__icon--hero {
 
-      width: 30px;
-
-      // position: absolute;
-      // top: 90%;
-      // left: 50%;
-      // transform: translate(-50% -90%);
-      transition: 200ms ease-in-out;
+      font-size: 1.7rem;
+      color: $black;
+      transition: 200ms ease-in;
 
       &:hover {
-        transform: rotateZ(360deg);
+        transform: rotateZ(360deg) !important;
       }
 
     }

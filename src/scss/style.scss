@@ -1,16 +1,18 @@
 // global
 @import "reset.scss";
-@import "_variables.scss";
-@import "_global.scss";
+@import "variables.scss";
+@import "global.scss";
 
 // addons
 
 // @import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900&display=swap&subset=latin-ext');
 // @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap&subset=latin-ext');
 // @import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext');
+// @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext");
+// @import "scss/fontawesome.scss";
+// @import "scss/solid.scss";
 
-// our modules
+//modules
 @import "c_header.scss";
 @import "c_hero.scss";
 @import "c_about.scss";
