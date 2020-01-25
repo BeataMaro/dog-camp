@@ -1,11 +1,14 @@
 //Hero title animation
 
 const hdr = document.getElementById('header');
+// let lastTitle = document.getElementById('last');
 const hamburger = document.querySelector('[data-hamburger-menu]');
 const navItems = document.getElementById('navItems');
 const scrollArrow = document.querySelector('.scrollArrow');
+const iconHero = document.querySelector('.scrollArrow__icon--hero');
 const arrowIcon = document.getElementById('heroIcon');
 const submitBtn = document.getElementById('submitBtn');
+const goToTopBtn = document.getElementById('goToTop');
 
 const heroTitle = document.querySelector('.hero__title');
 const heroText = heroTitle.textContent;
@@ -20,8 +23,10 @@ let loadAnimation = setTimeout(function () {
     heroTitle.innerHTML += '<span>' + heroLetters[i] + '</span>'
   }
 
-  let last = heroText.match(/\s\w+$/i)[0];
-  console.log(last);
+  // lastTitle.style.opacity = "1";
+
+  // let last = heroText.match(/\s\w+$/i)[0];
+  // console.log(last);
 
   let item = 0;
   let timer = setInterval(onTick, 65);
@@ -33,24 +38,19 @@ let loadAnimation = setTimeout(function () {
 
     span.classList.add('color');
     item++
-
-    if (item === heroLetters.length - 4) {
-
+    if (item === heroLetters.length) {
       complete();
       return;
-
     }
   };
 
   function complete() {
-
     clearInterval(timer);
     timer = null;
-
   };
+}, 1000);
 
-
-})
+goToTopBtn.style.display = "none";
 
 //Hamburger menu
 
@@ -61,26 +61,44 @@ navItems.onclick = () => document.body.classList.remove('open');
 //header scroll animation
 
 window.onscroll = function () {
+
+
   if (scrollArrow.style.pointerEvents === "none") {
     scrollArrow.style.pointerEvents = "auto"
   }
 
-  // console.log(window.scrollY);
   if (this.oldScroll < this.scrollY) {
-    // console.log('down');
     hdr.classList.add('down');
     arrowIcon.style.opacity = '0';
     scrollArrow.style['pointer-events'] = "none"
 
   } else {
-    // console.log('up');
     hdr.classList.remove('down');
     arrowIcon.style.opacity = '1';
     this.oldScroll = this.scrollY;
-    scrollArrow.style['pointer-events'] = "auto"
+    scrollArrow.style['pointer-events'] = "auto";
 
   }
+  //Go to top button
+
+  if ((document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)) {
+
+    goToTopBtn.style.display = "block";
+
+  } else {
+
+    goToTopBtn.style.display = "none";
+  }
 }
+
+function scrollTop() {
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+goToTopBtn.onclick = scrollTop;
+
 //Form actions
 window.onload = function () {
   const contactForm = document.querySelector('form'),
@@ -90,10 +108,8 @@ window.onload = function () {
     checkLabel = contactForm.querySelector('.check'),
     formStatement = contactForm.querySelector('.statement');
 
-
   if (checkPermission.checked == true) {
     checkLabel.style.color = "rgb(50, 180, 140)";
-
   }
 
   //form submit
@@ -115,7 +131,6 @@ window.onload = function () {
         if (checkPermission.checked == true) {
           checkLabel.style.color = "rgb(50, 180, 140)";
         }
-
       }
     }
 

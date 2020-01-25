@@ -3,23 +3,21 @@
   background-color: $color-2-light;
   height: 100vh;
   width: 100%;
-  background-image: url("../img/hero/jeff-nissen-Aok-unsplash\ 768x450\ hero.jpg");
+  background-image: url("/img/hero/jeff-nissen-Aok-unsplash768x450.jpg");
   background-repeat: no-repeat;
-  background-size: 250%;
   background-position: 15%;
   overflow: hidden;
   background-attachment: fixed;
   @extend %shadow-box;
 
   @media screen and (min-width: $bpoint-tab) {
-    background-image: url("../img/hero/jeff-nissen-Aok-unsplash\ 1920x600\ hero.jpg");
+    background-image: url("/img/hero/jeff-nissen-Aok-unsplash1200x600.jpg");
     background-size: cover;
     background-position: 15% top;
-
   }
 
   @media screen and (min-width: $bpoint-desk) {
-    background-image: url("../img/hero/jeff-nissen-Aok-unsplash\ 1920x800\ hero.jpg");
+    background-image: url("/img/hero/jeff-nissen-Aok-unsplash1920x800.jpg");
     background-position: center;
 
   }
@@ -29,23 +27,32 @@
     width: 100%;
     height: 100%;
 
-    h1 {
+    .hero__title {
 
       position: absolute;
-      top: 50%;
+      top: 70%;
       left: 50%;
-      width: 80%;
-      transform: translate(-50%, -50%);
-      text-align: right;
-      font-size: 10vmin;
+      transform: translate(-50%, -70%);
+      text-align: center;
+      font-size: 8vmin;
       font-weight: $fw-bold;
       line-height: 10vmin;
       text-shadow: 0 4px $black;
       text-transform: capitalize;
+      word-wrap: wrap;
+
+      &--last {
+
+        color: $white;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
 
       & span {
 
-        color: $white;
+        display: none;
 
         &::selection {
           color: brown;
@@ -54,6 +61,7 @@
 
       & span.color {
 
+        display: inline;
         color: brown;
 
         &::selection {
@@ -67,18 +75,32 @@
   .scrollArrow {
 
     position: absolute;
-    top: 60%;
+    bottom: 10%;
     left: 0;
 
+    @media screen and (min-width: $bpoint-desk) {
+
+      top: 60%;
+    }
 
     &__icon--hero {
 
+      padding: .2em;
+      border-radius: 22px;
       font-size: 1.7rem;
       color: $black;
       transition: 200ms ease-in;
+      background: rgba(128, 128, 128, 0.24);
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, .1);
+
+      @media screen and (min-width: $bpoint-desk) {
+
+        font-size: 1rem;
+        color: grey;
+      }
 
       &:hover {
-        transform: rotateZ(360deg) !important;
+        transform: rotateZ(360deg);
       }
 
     }

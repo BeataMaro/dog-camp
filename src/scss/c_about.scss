@@ -1,10 +1,32 @@
+#scrollTarget1 {
+
+  height: 1em;
+}
+
 .about {
+
+  h2 {
+    padding-top: $space;
+  }
 
   &__content {
     padding-top: $space;
+    text-align: center;
   }
 
   @media (prefers-color-scheme: dark) {
     color: $white;
+  }
+
+  .scrollArrow {
+
+    &--icon {
+      transition: 200ms ease;
+      font-size: 1rem;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
   }
 }

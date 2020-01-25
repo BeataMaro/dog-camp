@@ -1,13 +1,4 @@
 .contactForm {
-  width: calc(100% - (2 * $space));
-  margin: 0 $space;
-  // position: absolute;
-  // left: $space;
-  color: $white;
-
-  // @media screen and (min-width: $bpoint-desk) {
-  //   width: 90%;
-  // }
   h2 {
     color: $color-1;
   }
@@ -18,50 +9,61 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("../img/kevin-noble-gA3Qd2tquMc-unsplash.jpg");
+    background-image: url("/img/form/patrick-hendry-dog-and-man-sunset-unsplash768x450.jpg");
     background-size: cover;
-    background-position: 60%;
+    background-position: 50%;
     z-index: -1;
 
     @media screen and (min-width: $bpoint-tab) {
-      background-position: center;
-      transform: scaleX(-1);
+      background-image: url("/img/form/patrick-hendry-dog-and-man-sunset-unsplash1200x800.jpg");
+      background-position: 50%;
     }
 
     @media screen and (min-width: $bpoint-desk) {
-      background-position: 30%;
+      background-image: url("/img/form/patrick-hendry-dog-and-man-sunset-unsplash1920x800.jpg");
+      background-position: 10%;
       transform: scaleX(-1);
     }
   }
 
   &__content {
-    margin: $space 0;
+    // margin: $space 0;
     padding: $space;
+    // border: 15px solid $white;
+    // border-left-width: 5px;
+    // border-right-width: 5px;
+    // outline: 1px solid $white;
+    display: flex;
+    flex-direction: column;
 
     @media screen and (min-width: $bpoint-desk) {
-      display: grid;
-      grid-template-columns: 1fr 3fr;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
     &-info {
-      min-width: 60%;
-      background-color: rgba($white, 0.8);
+      border-radius: 4px 4px 0 0;
+      background-color: rgba($white, 0.5);
       text-align: center;
       padding: 0.5 * $space 0;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      border-radius: 2px;
+      align-self: center;
+      // flex-basis: 70%;
 
       &::before {
         content: "";
         display: block;
         width: 150px;
+        align-self: center;
         height: 5px;
-        background-color: $green;
+        background-color: $color-4-light;
       }
 
       @media screen and (min-width: $bpoint-tab) {
+        border-radius: 4px;
+        flex-basis: 60%;
+        // align-items: center;
         // flex-direction: row;
         // justify-content: space-evenly;
         // align-items: center;
@@ -69,16 +71,15 @@
       }
 
       @media screen and (min-width: $bpoint-desk) {
-        flex-direction: column;
+        flex-basis: 40%;
         font-size: 1.25 * $font-size-base;
-        padding: $space 0;
+        text-align: left;
       }
 
       h3 {
         text-transform: uppercase;
         font-weight: $fw-bold;
-        letter-spacing: 3px;
-        margin-bottom: $space;
+        letter-spacing: 1px;
         color: $color-1;
 
         &::after {
@@ -87,188 +88,184 @@
           height: 0.5px;
           width: 90%;
           margin: auto;
-          background-color: $color-5;
+          background-color: $color-4-light;
         }
       }
 
       ul {
-        color: $color-5;
+        color: $color-1;
         padding: $space;
       }
 
       @media screen and (min-width: $bpoint-desk) {
-        width: 100%;
+        // width: 50%;
+      }
+
+      i {
+        margin-right: 0.1 * $space;
       }
     }
+  }
 
-    //CONTACT FORM
+  //CONTACT FORM
 
-    &-form {
-      fieldset {
-        width: 80%;
-        color: $white;
-        background-color: rgba($white, 0.8);
-        margin: $space 0;
-        padding: $space;
-        border-radius: 2px;
-        color: $color-1;
+  &__form {
+    flex-basis: 55%;
 
-        @media screen and (min-width: $bpoint-tab) {
-          width: 50%;
-          margin-left: auto;
-        }
+    fieldset {
+      color: $white;
+      background-color: rgba($white, 0.9);
+      padding: $space;
+      border-radius: 2px;
+      color: $color-1;
 
-        @media screen and (min-width: $bpoint-desk) {
-          padding: 0.5 * $space $space;
-          margin-left: auto;
-        }
+      @media screen and (min-width: $bpoint-tab) {
+      }
 
-        input,
-        textarea {
+      @media screen and (min-width: $bpoint-desk) {
+        padding: 0.5 * $space $space;
+      }
+
+      input,
+      textarea {
+        color: $color-4-light;
+
+        &::selection {
           color: $color-2;
-
-          &::selection {
-            color: $color-4-light;
-          }
         }
+      }
 
-        ::placeholder {
+      ::placeholder {
+        color: $color-4-light;
+      }
+
+      //REQUIRED FIELDS
+      .req {
+        position: relative;
+
+        &::after {
+          content: "\1f7bb";
+          position: absolute;
+          right: -0.5 * $space;
+          font-size: $font-size-body2;
           color: $color-4-light;
         }
+      }
 
-        //REQUIRED FIELDS
-        .req {
-          position: relative;
+      input[type="number"],
+      input[type="text"],
+      input[type="email"] {
+        height: 30px;
+        width: 100%;
+        background-color: $beige;
+        border-radius: 3px;
+        border: none;
+        outline: none;
+        margin-bottom: 5px;
 
-          &::after {
-            content: "\1f7bb";
-            position: absolute;
-            right: -0.5 * $space;
-            font-size: $font-size-body2;
-            color: $color-4-light;
-          }
+        @media screen and (min-width: $bpoint-desk) {
+          height: 40px;
         }
 
-        input[type="number"],
-        input[type="text"],
-        input[type="email"] {
-          height: 30px;
-          width: 100%;
-          background-color: $beige;
-          border-radius: 3px;
-          border: none;
-          outline: none;
-          margin-bottom: 5px;
-
-          @media screen and (min-width: $bpoint-desk) {
-            height: 40px;
-          }
-
-          &:focus {
-
-            border: 0.5px solid $green;
-          }
-
-          &:invalid:not(:focus) {
-
-            background: rgba(2, 250, 250, .1);
-          }
+        &:focus {
+          border: 0.5px solid $color-4-light;
         }
 
-        textarea {
-          resize: none;
-          font-size: 0.75 * $font-size-base;
+        &:invalid:not(:focus) {
+          background: rgba(2, 250, 250, 0.1);
+        }
+      }
+
+      textarea {
+        resize: none;
+        font-size: 0.75 * $font-size-base;
+        width: 100%;
+        border: none;
+        background-color: rgb(240, 235, 235);
+
+        @media screen and (min-width: $bpoint-desk) {
           width: 100%;
-          border: none;
-          background-color: rgb(240, 235, 235);
-
-          @media screen and (min-width: $bpoint-desk) {
-            width: 100%;
-          }
-
-          &:focus {
-
-            border: 0.5px solid $green;
-          }
         }
 
-        //CHECKBOX
-        .perm {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          width: 100%;
-          height: 10em;
+        &:focus {
+          border: 0.5px solid $color-4-light;
+        }
+      }
 
-          a {
-            color: $color-5;
-            @extend %link-style;
+      //CHECKBOX
+      .perm {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 10em;
+
+        a {
+          color: $color-5;
+          @extend %link-style;
+        }
+
+        input[type="checkbox"] {
+          display: none;
+
+          & + label {
+            width: 60%;
+            position: relative;
+            padding-left: 2 * $base-unit;
+
+            &::before {
+              content: "\2610";
+              position: absolute;
+              left: 0;
+              font-size: 1.5em;
+              transform: translateY(-0.3em);
+              color: $green;
+            }
           }
 
-          input[type="checkbox"] {
-            display: none;
-
-            &+label {
-              width: 60%;
-              position: relative;
-              padding-left: 2 * $base-unit;
+          &:checked {
+            & + label {
+              color: $green;
 
               &::before {
-                content: "\2610";
-                position: absolute;
-                left: 0;
-                font-size: 1.5em;
-                transform: translateY(-0.3em);
-                color: $green;
-              }
-            }
-
-            &:checked {
-
-              &+label {
-
-                color: $green;
-
-                &::before {
-                  content: "\2713";
-                  color: $color-4;
-                }
+                content: "\2713";
+                color: $color-4;
               }
             }
           }
+        }
 
-          //SUBMIT BUTTON
-          input[type="submit"] {
-            align-self: center;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            min-width: 200px;
-            background-color: $color-5;
-            color: $white;
-            padding: 0.25 * $space 0.5 * $space;
-            border-radius: 4px;
-            transition: 200ms ease-in-out;
+        //SUBMIT BUTTON
+        input[type="submit"] {
+          align-self: center;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          min-width: 200px;
+          background: $black;
+          color: $white;
+          padding: 0.25 * $space 0.5 * $space;
+          border-radius: 4px;
+          transition: 200ms ease-in-out;
 
-            &:hover {
-              background-color: $green;
-            }
+          &:hover {
+            background-color: $green;
+          }
+        }
+
+        .statement {
+          opacity: 0;
+          transition: 400ms ease;
+
+          &.correct {
+            color: $color-4-light;
+            font-weight: $fw-bold;
+            opacity: 1;
           }
 
-          .statement {
-            opacity: 0;
-            transition: 400ms ease;
-
-            &.correct {
-              color: $color-4-light;
-              font-weight: $fw-bold;
-              opacity: 1;
-            }
-
-            &.error {
-              color: $color-error;
-              opacity: 1;
-            }
+          &.error {
+            color: $color-error;
+            opacity: 1;
           }
         }
       }

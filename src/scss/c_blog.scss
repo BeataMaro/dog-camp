@@ -3,34 +3,33 @@
   height: 1em;
 }
 
-.box {
+.blog {
 
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
-  align-content: space-between;
+  justify-content: space-between;
 
   &__article {
+    background: #f8f8f8;
+    margin-bottom: .3 * $space;
+    padding: $space 0;
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
-    padding: $space 0;
-    margin-bottom: .1 * $space;
     transition: 500ms ease;
 
-
-
     @media screen and (min-width: $bpoint-tab) {
-      flex-basis: 50%;
+      flex-basis: 47%;
     }
 
     @media screen and (min-width: $bpoint-desk) {
-
       flex-basis: 33%;
     }
 
     &:hover {
       @extend %shadow-box;
+
     }
 
     &--last {
@@ -45,14 +44,14 @@
     }
 
     &-img {
-      // width: 200px;
       width: 70%;
+      max-height: 480px;
       align-self: center;
       vertical-align: middle;
 
-      @media screen and (min-width: $bpoint-tab) {
-        width: 60%;
 
+      @media screen and (min-width: $bpoint-tab) {
+        width: 80%;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -62,17 +61,15 @@
 
     &-title {
       color: $black;
-      padding: $space;
-      text-transform: uppercase;
+      padding-top: $space;
+      margin: auto;
       font-weight: $fw-bold;
-      letter-spacing: 1px;
     }
 
     &-text {
       color: $color-1;
       width: 80%;
-      text-align: left;
-      margin: auto;
+      margin-left: $space;
 
       @media (prefers-color-scheme: dark) {
         color: $color-2-light;
@@ -83,7 +80,35 @@
       text-decoration: none;
       color: rgb(46, 221, 125);
       align-self: flex-end;
-      margin-right: 5%;
+      margin-right: $space;
     }
+  }
+}
+
+a {
+
+  @extend %link-style;
+
+}
+
+.more {
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin-left: -$space;
+  width: 100vw;
+  font-size: 1.2rem;
+  color: $color-2;
+  transition: all 200ms ease;
+
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-4;
+  }
+
+  @media screen and (min-width: $bpoint-tab) {
+
+    display: none;
   }
 }

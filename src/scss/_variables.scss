@@ -29,6 +29,7 @@ $base-unit: 1rem; //12px, 16px i 20px - w zależności od szerokości ekranu - g
 $font-1: 'Quicksand',
 sans-serif;
 $font-size-base: $base-unit;
+$fw-light: 100;
 $fw-normal: 400; // przy zmianie fontu może być inna grubość
 $fw-bold: 700; // dlatego warto robić na zmiennych
 
