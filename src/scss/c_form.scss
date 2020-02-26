@@ -1,0 +1,166 @@
+.form {
+
+    background: $violet;
+    padding: $space;
+    background-image: url('/img/form/patrick-hendry-dog-and-man-sunset-unsplash1200x800.jpg');
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    margin-bottom: 0;
+
+    h2 {
+
+        color: $white;
+    }
+
+    &-cont {
+        display: flex;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: $bpoint-desk) {
+
+            margin-left: -0.5 * $space;
+            margin-right: -0.5 * $space;
+        }
+    }
+
+    &-block {
+        flex-basis: 100%;
+        display: flex;
+        flex-flow: column wrap;
+
+        &--half {
+            @media screen and (min-width: $bpoint-tab) {
+                flex-basis: 50%;
+            }
+        }
+
+        label {
+            display: block;
+            color: $color-2;
+            margin-bottom: 0.25 * $space;
+        }
+
+        input,
+        select {
+            display: block;
+            width: 80%;
+            color: $green;
+            padding: 0.5 * $space;
+            border: .5px solid $color-2;
+            outline: 2px solid $color-3;
+
+            &:focus {
+                outline: 2px solid $color-sand;
+            }
+
+            .is-submitted &:invalid {
+                outline: 2px solid $color-error;
+                background-color: rgba($color-error, 0.2);
+
+                +.form-error-msg {
+
+                    visibility: visible;
+                }
+            }
+        }
+
+        .form-error-msg {
+            display: block;
+            visibility: hidden;
+            position: absolute;
+            bottom: -0.75 * $space;
+            color: $color-error;
+            font-size: $font-size-body2;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            opacity: 0;
+            height: 0;
+            width: 0;
+            margin: 0;
+
+            &:focus {
+                &+label:before {
+                    color: $color-4;
+                }
+            }
+
+            &+label {
+                position: relative;
+                user-select: none;
+                padding-left: $space;
+                margin: 0;
+
+                &::before {
+
+                    content: "\2610";
+                    position: absolute;
+                    left: 0;
+                    top: -0.25em;
+                    font-size: 1.5em;
+                }
+            }
+
+            &:checked+label {
+                &::before {
+                    content: '\2713';
+                }
+            }
+
+            .is-submitted &:invalid+label {
+                color: $color-error;
+
+                &+.form-error-msg {
+                    visibility: visible;
+                }
+            }
+        }
+
+        input[type="radio"] {
+            &+label {
+                &:before {
+                    content: "○";
+                    top: -0.45em;
+                    font-size: 2em;
+                }
+            }
+
+            &:checked+label {
+
+                &:before {
+                    content: "●";
+                }
+            }
+        }
+    }
+
+    &-el {
+        display: block;
+        position: relative;
+        margin-bottom: $space;
+    }
+
+    .btn {
+        min-width: 40%;
+        margin: auto;
+        transition: 300ms ease-in;
+        border-color: $black;
+
+        &:hover {
+
+            background: $violet-light;
+            border-color: $violet-light;
+        }
+
+        &:active {
+            color: $white;
+            background: $green;
+            border-color: $green;
+
+        }
+    }
+}

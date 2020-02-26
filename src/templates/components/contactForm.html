@@ -1,23 +1,27 @@
-<div id="scrollTarget3"></div>
-<section class="component contactForm" id="contactForm">
+<!-- <div id="scrollTarget3"></div>
+<section class="component contactForm" id="form">
     <h2>Contact Form</h2>
-    <div class="wrapper">
-        <div class="contactForm__background"></div>
+     <div class="contactForm__background"> 
+</div> 
+<div class="wrapper">
 
         <div class="contactForm__content">
-            <div class="contactForm__content-info">
+
+            <div class="contactForm__info contactForm--half">
                 <h3>Dog's Camp</h3>
                 <ul><i class="fa fa-home"></i>
                     <li>Lyncoln Street 345</li>
-                    <li>32-566 USA</li>
-                    <i class="fa fa-envelope"></i>
-                    <li>dogcamp@info.com</li>
-                    <i class="fa fa-phone"></i>
-                    <li>677-33-22</li>
+                    <div class="contactForm__content half">
+                        <li>32-566 USA</li>
+                        <i class="fa fa-envelope"></i>
+                        <li>dogcamp@info.com</li>
+                        <i class="fa fa-phone"></i>
+                        <li>677-33-22</li>
                 </ul>
             </div>
 
-            <form action="" method="GET" class="contactForm__form" name="contactForm" novalidate>
+            <form action="" method="POST" class="contactForm__form  contactForm--half" name="contactForm" :mailto="#"
+                novalidate>
                 <fieldset>
                     <p>
                         <label for="userName" class="req">Name:</label><input type="text" name="userName" id="userName"
@@ -27,7 +31,8 @@
 
                         <label for="userMail" class="req">E-mail:</label>
                         <input type="email" name="userMail" id="userMail" class="input"
-                            title="Please fill out this field" required autocomplete="off" />
+                            title="Please fill out this field" placeholder="jane.stevenson@gmail.com" required
+                            autocomplete="off" />
 
                     </p>
                     <p>
@@ -42,7 +47,8 @@
                     </p>
                     <div class="perm">
                         <input type="checkbox" name="checkbox" class="permission" id="check"
-                            title="Please select agreement" required /><label for="check" class="req check">I agree to
+                            title="Please select agreement" required /><label for="check" class="check">I agree
+                            to
                             the <span>
                                 <a href="#" class="terms">terms of
                                     service</a>
@@ -51,13 +57,11 @@
                         <p class="statement">Komunikat</p>
                     </div>
                 </fieldset>
-
-
             </form>
-
         </div>
 
     </div>
 
+    </div>
 
-</section>
+</section> -->

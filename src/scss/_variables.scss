@@ -3,35 +3,31 @@ $color-2: #777;
 $color-3: #d1d0d1;
 $color-4: #91f87e;
 $color-5: rgb(99, 110, 67);
+$color-brown: brown;
 $green: rgb(50, 180, 140);
 $beige: rgb(240, 235, 235);
-$violet: #8B00A9;
+$violet: #3b1381;
+$color-sand: #b4aa82;
 
 $color-1-light: #6f6f6f;
 $color-2-light: #9f9f9f;
 $color-3-light: #dcdbdc;
 $color-4-light: #77abe9;
+$violet-light: #5769f5;
 
-$white: #fff;
+$white: #f5f5f5;
 $black: #111;
 $color-error: red;
 $color-ok: green;
 
-$base-unit: 1rem; //12px, 16px i 20px - w zależności od szerokości ekranu - global.scss - html
+$base-unit: 1rem;
 
-// $font-1: "Poppins", sans-serif;
-// $font-1: 'Maven Pro',
-// sans-serif;
-// $font-1: 'Abril Fatface',
-// cursive;
-// $font-1: 'Pacifico',
-// cursive;
 $font-1: 'Quicksand',
 sans-serif;
 $font-size-base: $base-unit;
 $fw-light: 100;
-$fw-normal: 400; // przy zmianie fontu może być inna grubość
-$fw-bold: 700; // dlatego warto robić na zmiennych
+$fw-normal: 400;
+$fw-bold: 700;
 
 $font-size-body: $font-size-base;
 $font-size-body2: $font-size-base * 0.75;
@@ -39,7 +35,7 @@ $font-size-h1: $font-size-base * 2.25;
 $font-size-h2: $font-size-base * 1.5;
 $font-size-h3: $font-size-base * 1.25;
 
-$space: $base-unit * 2; // 24px, 32px, 40px
+$space: $base-unit * 2;
 
 $bpoint-mob: 360px;
 $bpoint-tab: 768px;

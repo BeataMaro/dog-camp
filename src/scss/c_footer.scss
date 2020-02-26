@@ -1,17 +1,78 @@
 .footer {
-  color: $white;
-  background-color: $color-1;
+  color: $color-3;
+  background: $black;
   padding: 0.5 * $space;
+  display: grid;
 
   &__content {
-    font-size: $font-size-body2;
-    text-shadow: 1px 1px $black;
 
-    &-privacy {
 
+    .campAddress {
+      color: $violet-light;
+      margin-bottom: 1em;
+
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    i {
+      margin-right: .25 * $space;
+      color: $color-2;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-3;
+      }
+    }
+
+    &--copyrights {
+      text-align: center;
+      color: $color-2;
+      width: 100%;
+      text-shadow: 1px 1px $black;
+      font-size: $font-size-body2;
+      margin-top: $space;
+    }
+
+    .footer {
+      width: 100%;
+
+      &__menu ul {
+        display: flex;
+        justify-content: space-between;
+
+        & li {
+          display: grid;
+
+          & i {
+            justify-self: center;
+          }
+        }
+      }
+    }
+
+
+    &--privacy {
+
+      cursor: pointer;
       @extend %link-style;
-      color: $color-4;
+      color: $violet-light;
 
+      &:hover {
+
+        text-decoration: underline;
+        text-shadow: 1px 1px $violet;
+      }
+    }
+
+    &--author {
+      display: block;
+
+      @media screen and (min-width: $bpoint-tab) {
+        display: inline;
+      }
     }
   }
 }

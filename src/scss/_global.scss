@@ -24,11 +24,14 @@ html {
 }
 
 #scrollTarget1,
-#scrollTarget2,
-#scrollTarget3 {
-  height: 5em;
+#scrollTarget2 {
+  height: 3em;
   background-color: transparent;
 
+}
+
+#scrollTarget3 {
+  height: 1em;
 }
 
 .scrollArrow {
@@ -46,13 +49,13 @@ html {
 
 }
 
-
-//typography
+//Typography
 h1,
 h2,
 h3 {
 
   text-align: center;
+  margin-bottom: $space;
 }
 
 h1 {
@@ -83,8 +86,6 @@ p {
   max-width: $container-max-width;
   margin: 0 auto;
   position: relative;
-  // padding-left: $space;
-  // padding-right: $space;
   padding: 0 $space;
 }
 
@@ -111,15 +112,16 @@ textarea {
   padding: .2 * $space;
   transition: all 350ms ease-in-out;
   line-height: 1;
+  color: $white;
 }
 
 .btnTop {
   position: fixed;
   right: 0;
-  bottom: 0;
-  color: $color-2;
-  padding: $space;
-  vertical-align: middle;
+  bottom: $space;
+
+  padding: .3 * $space;
+  line-height: .5;
 
   &:active,
   &:focus {
@@ -132,7 +134,8 @@ textarea {
 
   &:hover {
     text-shadow: 0 2px $black;
-    color: $white;
+    transform: scale(1.2);
+    color: $violet-light;
   }
 }
 
@@ -150,21 +153,5 @@ img {
 
 %shadow-box {
 
-  // box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
   box-shadow: 0 17px 21px 0 #8a8a8a;
 }
-
-//DARK MODE 
-
-// @media (prefers-color-scheme: dark) {
-
-//   body {
-//     background-color: $color-1;
-//   }
-
-//   p {
-
-//     color: $white;
-//   }
-
-// }

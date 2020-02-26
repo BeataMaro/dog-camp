@@ -78,9 +78,15 @@
 
     &-link {
       text-decoration: none;
-      color: rgb(46, 221, 125);
+      color: $violet-light;
       align-self: flex-end;
       margin-right: $space;
+      transition: 250ms ease-in;
+
+      &:hover {
+
+        color: $green;
+      }
     }
   }
 }
