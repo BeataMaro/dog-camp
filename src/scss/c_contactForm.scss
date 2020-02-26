@@ -13,18 +13,18 @@
     bottom: 0;
 
     background-color: $color-3;
-    background-image: url("/img/form/patrick-hendry-dog-and-man-sunset-unsplash768x450.jpg");
+    background-image: url(../img/form/patrick-hendry-dog-and-man-sunset-unsplash768x450.jpg);
     background-size: cover;
     background-position: 50%;
     z-index: -1;
 
     @media screen and (min-width: $bpoint-tab) {
-      background-image: url("/img/form/patrick-hendry-dog-and-man-sunset-unsplash1200x800.jpg");
+      background-image: url(../img/form/patrick-hendry-dog-and-man-sunset-unsplash1200x800.jpg);
       background-position: 50%;
     }
 
     @media screen and (min-width: $bpoint-desk) {
-      background-image: url("/img/form/patrick-hendry-dog-and-man-sunset-unsplash1920x800.jpg");
+      background-image: url(../img/form/patrick-hendry-dog-and-man-sunset-unsplash1920x800.jpg);
       transform: scaleX(-1);
     }
   }
