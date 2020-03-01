@@ -91,7 +91,7 @@
 
       input,
       textarea {
-        color: $color-4-light;
+        color: $blue-light;
 
         &::selection {
           color: $color-2;
@@ -99,7 +99,7 @@
       }
 
       ::placeholder {
-        color: $color-4-light;
+        color: $blue-light;
       }
 
       //REQUIRED FIELDS
@@ -111,7 +111,7 @@
           position: absolute;
           right: -0.5 * $space;
           font-size: $font-size-body2;
-          color: $color-4-light;
+          color: $blue-light;
         }
       }
 
@@ -165,7 +165,7 @@
 
           &::after {
             content: "\1f7bb";
-            color: $color-4-light;
+            color: $blue-light;
             font-size: $font-size-body2;
             margin-left: 0.25 * $space;
           }
@@ -224,7 +224,7 @@
           transition: 300ms ease;
 
           &.correct {
-            color: $color-4-light;
+            color: $blue-light;
             font-weight: $fw-bold;
             opacity: 1;
           }

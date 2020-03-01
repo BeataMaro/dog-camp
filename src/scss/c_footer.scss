@@ -2,9 +2,9 @@
   color: $color-3;
   background: $black;
   padding: 0.5 * $space;
-  display: grid;
 
   &__content {
+    display: grid;
 
 
     .campAddress {
@@ -15,6 +15,7 @@
 
     h3 {
       text-align: left;
+      margin-bottom: .5 * $space;
     }
 
     i {
@@ -41,7 +42,7 @@
 
       &__menu ul {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
 
         & li {
           display: grid;

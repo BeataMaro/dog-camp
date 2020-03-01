@@ -568,13 +568,25 @@ a, .footer__content--privacy {
     .more {
       display: none; } }
 
+section.form::before {
+  content: "";
+  display: block;
+  background: #3b1381;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  -webkit-transform: skew(0deg, 190deg);
+          transform: skew(0deg, 190deg); }
+  @media screen and (min-width: 768px) {
+    section.form::before {
+      height: 600px;
+      -webkit-transform: skew(0deg, 190deg);
+              transform: skew(0deg, 190deg); } }
+
 .form {
   background: #3b1381;
   padding: 2rem;
-  background-image: url(../img/form/patrick-hendry-dog-and-man-sunset-unsplash1200x800.jpg);
-  background-size: 30%;
-  background-repeat: no-repeat;
-  background-position: right bottom;
   margin-bottom: 0; }
   .form h2 {
     color: #f5f5f5; }
@@ -584,10 +596,6 @@ a, .footer__content--privacy {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    @media screen and (min-width: 1200px) {
-      .form-cont {
-        margin-left: -1rem;
-        margin-right: -1rem; } }
   .form-block {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -613,7 +621,8 @@ a, .footer__content--privacy {
       color: #32b48c;
       padding: 1rem;
       border: 0.5px solid #777;
-      outline: 2px solid #d1d0d1; }
+      outline: 2px solid #d1d0d1;
+      z-index: 10; }
       .form-block input:focus,
       .form-block select:focus {
         outline: 2px solid #b4aa82; }
@@ -660,7 +669,7 @@ a, .footer__content--privacy {
           font-size: 1.5em; }
       .form-block input[type="checkbox"]:checked + label::before,
       .form-block input[type="radio"]:checked + label::before {
-        content: '\2713'; }
+        content: "\2713"; }
       .is-submitted .form-block input[type="checkbox"]:invalid + label, .is-submitted
       .form-block input[type="radio"]:invalid + label {
         color: red; }
@@ -684,8 +693,9 @@ a, .footer__content--privacy {
     transition: 300ms ease-in;
     border-color: #111; }
     .form .btn:hover {
-      background: #5769f5;
-      border-color: #5769f5; }
+      background: #91f87e;
+      border-color: #91f87e;
+      color: #333; }
     .form .btn:active {
       color: #f5f5f5;
       background: #32b48c;
@@ -694,47 +704,49 @@ a, .footer__content--privacy {
 .footer {
   color: #d1d0d1;
   background: #111;
-  padding: 1rem;
-  display: grid; }
-  .footer__content .campAddress {
-    color: #5769f5;
-    margin-bottom: 1em; }
-  .footer__content h3 {
-    text-align: left; }
-  .footer__content i {
-    margin-right: 0.5rem;
-    color: #777;
-    cursor: pointer; }
-    .footer__content i:hover {
-      color: #d1d0d1; }
-  .footer__content--copyrights {
-    text-align: center;
-    color: #777;
-    width: 100%;
-    text-shadow: 1px 1px #111;
-    font-size: 0.75rem;
-    margin-top: 2rem; }
-  .footer__content .footer {
-    width: 100%; }
-    .footer__content .footer__menu ul {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .footer__content .footer__menu ul li {
-        display: grid; }
-        .footer__content .footer__menu ul li i {
-          justify-self: center; }
-  .footer__content--privacy {
-    cursor: pointer;
-    color: #5769f5; }
-    .footer__content--privacy:hover {
-      text-decoration: underline;
-      text-shadow: 1px 1px #3b1381; }
-  .footer__content--author {
-    display: block; }
-    @media screen and (min-width: 768px) {
-      .footer__content--author {
-        display: inline; } }
+  padding: 1rem; }
+  .footer__content {
+    display: grid; }
+    .footer__content .campAddress {
+      color: #5769f5;
+      margin-bottom: 1em; }
+    .footer__content h3 {
+      text-align: left;
+      margin-bottom: 1rem; }
+    .footer__content i {
+      margin-right: 0.5rem;
+      color: #777;
+      cursor: pointer; }
+      .footer__content i:hover {
+        color: #d1d0d1; }
+    .footer__content--copyrights {
+      text-align: center;
+      color: #777;
+      width: 100%;
+      text-shadow: 1px 1px #111;
+      font-size: 0.75rem;
+      margin-top: 2rem; }
+    .footer__content .footer {
+      width: 100%; }
+      .footer__content .footer__menu ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly; }
+        .footer__content .footer__menu ul li {
+          display: grid; }
+          .footer__content .footer__menu ul li i {
+            justify-self: center; }
+    .footer__content--privacy {
+      cursor: pointer;
+      color: #5769f5; }
+      .footer__content--privacy:hover {
+        text-decoration: underline;
+        text-shadow: 1px 1px #3b1381; }
+    .footer__content--author {
+      display: block; }
+      @media screen and (min-width: 768px) {
+        .footer__content--author {
+          display: inline; } }

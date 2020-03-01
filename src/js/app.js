@@ -117,7 +117,7 @@ form_el.onsubmit = function (event) {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
-        alert('form send');
+        alert('Form send. Thank You!');
 
         form_el.classList.remove('is-submitted');
         form_el.reset();
