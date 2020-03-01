@@ -2,7 +2,7 @@ section.form {
   &::before {
     content: "";
     display: block;
-    background: $violet;
+    background: $burgund;
     position: absolute;
     left: 0;
     width: 100%;
@@ -65,7 +65,7 @@ section.form {
         outline: 2px solid $color-error;
         background-color: rgba($color-error, 0.2);
 
-        + .form-error-msg {
+        +.form-error-msg {
           visibility: visible;
         }
       }
@@ -90,12 +90,12 @@ section.form {
       margin: 0;
 
       &:focus {
-        & + label:before {
+        &+label:before {
           color: $color-4;
         }
       }
 
-      & + label {
+      &+label {
         position: relative;
         user-select: none;
         padding-left: $space;
@@ -110,23 +110,23 @@ section.form {
         }
       }
 
-      &:checked + label {
+      &:checked+label {
         &::before {
           content: "\2713";
         }
       }
 
-      .is-submitted &:invalid + label {
+      .is-submitted &:invalid+label {
         color: $color-error;
 
-        & + .form-error-msg {
+        &+.form-error-msg {
           visibility: visible;
         }
       }
     }
 
     input[type="radio"] {
-      & + label {
+      &+label {
         &:before {
           content: "○";
           top: -0.45em;
@@ -134,7 +134,7 @@ section.form {
         }
       }
 
-      &:checked + label {
+      &:checked+label {
         &:before {
           content: "●";
         }
@@ -155,9 +155,8 @@ section.form {
     border-color: $black;
 
     &:hover {
-      background: $color-4;
-      border-color: $color-4;
-      color: $color-1;
+      background: $violet;
+      border-color: $violet;
     }
 
     &:active {
