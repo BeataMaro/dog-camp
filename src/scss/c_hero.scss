@@ -3,7 +3,7 @@
   background-color: $burgund;
   width: 100%;
   height: 90vh;
-  // background-image: url(../jeff-nissen-Aok-unsplash-mobile.jpg);
+  background-image: url(../img/hero/jeff-nissen-Aok-unsplash-mobile.jpg);
   background-image: url(../img/hero/jeff-nissen-Aok-unsplash1200x600.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,11 +12,11 @@
   background-attachment: fixed;
   @extend %shadow-box;
 
-  // @media screen and (min-width: $bpoint-tab) {
-  //   height: 100vh;
-  //   background-image: url(../img/hero/jeff-nissen-Aok-unsplash1200x600.jpg);
-  //   background-position: 15% top;
-  // }
+  @media screen and (min-width: $bpoint-tab) {
+    height: 100vh;
+    background-image: url(../img/hero/jeff-nissen-Aok-unsplash1200x600.jpg);
+    background-position: 15% top;
+  }
 
   @media screen and (min-width: $bpoint-desk) {
     background-image: url(../img/hero/jeff-nissen-Aok-unsplash1920x800.jpg);
