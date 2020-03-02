@@ -5,7 +5,8 @@
   height: 90vh;
   background-image: url(../img/hero/jeff-nissen-Aok-unsplash768x450.jpg);
   background-repeat: no-repeat;
-  background-position: 20% 60%;
+  background-size: cover;
+  background-position: 15% 60%;
   overflow: hidden;
   background-attachment: fixed;
   @extend %shadow-box;
@@ -13,7 +14,6 @@
   @media screen and (min-width: $bpoint-tab) {
     height: 100vh;
     background-image: url(../img/hero/jeff-nissen-Aok-unsplash1200x600.jpg);
-    background-size: cover;
     background-position: 15% top;
   }
 
@@ -101,14 +101,14 @@
       opacity: 0;
       padding: .2em;
       border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       transition: 200ms ease-in;
       background: rgba(128, 128, 128, 0.24);
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, .1);
 
       @media screen and (min-width: $bpoint-tab) {
 
-        font-size: 1rem;
+        font-size: 1.5rem;
         color: $black;
       }
 

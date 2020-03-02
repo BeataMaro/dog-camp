@@ -365,14 +365,14 @@ a, .footer__content--privacy {
   height: 90vh;
   background-image: url(../img/hero/jeff-nissen-Aok-unsplash768x450.jpg);
   background-repeat: no-repeat;
-  background-position: 20% 60%;
+  background-size: cover;
+  background-position: 15% 60%;
   overflow: hidden;
   background-attachment: fixed; }
   @media screen and (min-width: 768px) {
     .hero {
       height: 100vh;
       background-image: url(../img/hero/jeff-nissen-Aok-unsplash1200x600.jpg);
-      background-size: cover;
       background-position: 15% top; } }
   @media screen and (min-width: 1200px) {
     .hero {
@@ -433,7 +433,7 @@ a, .footer__content--privacy {
       opacity: 0;
       padding: .2em;
       border-radius: 50%;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       -webkit-transition: 200ms ease-in;
       transition: 200ms ease-in;
       background: rgba(128, 128, 128, 0.24);
@@ -441,7 +441,7 @@ a, .footer__content--privacy {
               box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.1); }
       @media screen and (min-width: 768px) {
         .hero .scrollArrow__icon--hero {
-          font-size: 1rem;
+          font-size: 1.5rem;
           color: #111; } }
       .hero .scrollArrow__icon--hero:hover {
         -webkit-transform: rotateZ(360deg);
@@ -582,7 +582,7 @@ section.form::before {
               transform: skew(0deg, 190deg); } }
 
 .form {
-  background: #3b1381;
+  background: #d1d0d1;
   padding: 2rem;
   margin-bottom: 0; }
   .form h2 {

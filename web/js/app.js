@@ -12,7 +12,7 @@ const heroLetters = heroText.split('');
 heroTitle.textContent = '';
 
 //Hero title animation
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
 
   for (let i = 0; i < heroLetters.length; i++) {
 
