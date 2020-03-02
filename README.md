@@ -4,7 +4,7 @@ Single-page website of dog training school. Created with Sass.
 
 ##Simple start:
 
-> npm install
+> npm install <br>
 > gulp
 
  
