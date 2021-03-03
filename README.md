@@ -1,12 +1,12 @@
-### Dog's Camp.
+# Dog's Camp.
 
 Single-page website of dog training school. 
 
 ## Technologies:
 
-- JavaScript
-- SCSS
-- Gulp
+* JavaScript
+* SCSS
+* Gulp
 
 ## Simple start:
 
